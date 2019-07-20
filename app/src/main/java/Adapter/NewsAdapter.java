@@ -11,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.placeholder.R;
-import com.squareup.picasso.Picasso;
 
 
 import java.util.List;
@@ -25,8 +24,9 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
 
 
-    public NewsAdapter(Context context, List listItem) {
-
+    public NewsAdapter(Context context1, List listItem1) {
+        this.context = context1;
+        this.newsItems = listItem1;
     }
 
     @NonNull
@@ -44,7 +44,8 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         NewsItem item = newsItems.get(position);
         holder.title.setText(item.getTitle());
         holder.description.setText(item.getDescription());
-        Picasso.with(context).load("http://i.imgur.com/DvpvklR.png").into(holder.image);
+        holder.image.setImageResource(R.drawable.news_view_holder);
+//        Picasso.get().load("http://i.imgur.com/DvpvklR.png").into(holder.image);
 
     }
 
@@ -54,11 +55,11 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public ImageView image;
-        public TextView title;
-        public TextView description;
+        private ImageView image;
+        private TextView title;
+        private TextView description;
 
-        public ViewHolder(@NonNull View itemView) {
+        private ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             image = (ImageView) itemView.findViewById(R.id.newsImage);
