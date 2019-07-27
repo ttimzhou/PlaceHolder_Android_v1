@@ -24,7 +24,6 @@ import Adapter.NewsAdapter;
 import Model.NewsItem;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView mTextMessage;
     private RecyclerView newsRecyclerView;
     private RecyclerView.Adapter newsAdapter;
     private List<NewsItem> newsItems;
@@ -35,14 +34,11 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
+                case R.id.navigation_matches:
                     return true;
-                case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
+                case R.id.navigation_news:
                     return true;
-                case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
+                case R.id.navigation_dashBoard:
                     return true;
             }
             return false;
@@ -54,24 +50,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
-        mTextMessage = findViewById(R.id.message);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        try {
-            SciChartSurface.setRuntimeLicenseKey("<LicenseContract>\n" +
-                    "  <Customer>tim.qianzhou@berkeley.edu</Customer>\n" +
-                    "  <OrderId>Trial</OrderId>\n" +
-                    "  <LicenseCount>1</LicenseCount>\n" +
-                    "  <IsTrialLicense>true</IsTrialLicense>\n" +
-                    "  <SupportExpires>08/17/2019 00:00:00</SupportExpires>\n" +
-                    "  <ProductCode>SC-ANDROID-2D-ENTERPRISE-SRC</ProductCode>\n" +
-                    "  <KeyCode>3eb14eb8f88a2ffc9f1e2a44844de24e0dc71c3fb4006fb08f49a3795be0d78f16602e35cbdd8b47abb9354ebb8161c2a6438c4928f690d77f215b38110adb566656e9c3401107fa262011ac76712ea0357b6295de48e5d2cae4586f668b180aae674740235652bcb2609f152d5d125c54b1d54290a18b409a9daba3eb0526d192c4a6a493292d5487d90d8189227fb97248e6c3a90efd793e174dfdca0dc882154ad5a401596bae455ff1bccbcf4c10333758</KeyCode>\n" +
-                    "</LicenseContract>");
-        } catch (Exception e) {
 
-        }
+//        startActivity(new Intent(this, StockChartActivity.class));
 
-        startActivity(new Intent(this, StockChartActivity.class));
 
 
         newsRecyclerView = (RecyclerView) findViewById(R.id.newsRecyclerView);
