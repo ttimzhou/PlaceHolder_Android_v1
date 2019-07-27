@@ -1,27 +1,29 @@
 package com.example.placeholder;
 
-import android.content.Intent;
-import android.os.Bundle;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.MenuItem;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.ArrayList;
+
+import Adapter.MatchesAdapter;
 import Adapter.NewsAdapter;
+import Model.MatchItem;
 import Model.NewsItem;
 
-public class MainActivity extends AppCompatActivity {
-    private RecyclerView newsRecyclerView;
-    private RecyclerView.Adapter newsAdapter;
-    private List<NewsItem> newsItems;
+public class MatchPreviewActivity extends AppCompatActivity {
+
+
+    private RecyclerView matchRecyclerView;
+    private ArrayList<MatchItem> matchItems;
+    private RecyclerView.Adapter matchesAdapter;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -30,9 +32,9 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_matches:
-                    startActivity(new Intent(MainActivity.this, MatchPreviewActivity.class));
                     return true;
                 case R.id.navigation_news:
+                    startActivity(new Intent(MatchPreviewActivity.this, MainActivity.class));
                     return true;
                 case R.id.navigation_dashBoard:
                     return true;
@@ -41,37 +43,33 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.match_activity_preview);
         BottomNavigationView navView = findViewById(R.id.nav_view_match);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        navView.setSelectedItemId(R.id.navigation_news);
+        navView.setSelectedItemId(R.id.nav_view_match);
 
 
-//        startActivity(new Intent(this, StockChartActivity.class));
-
-
-
-        newsRecyclerView = (RecyclerView) findViewById(R.id.newsRecyclerView);
+        matchRecyclerView = (RecyclerView) findViewById(R.id.recyclerViewMatch);
 //        newsRecyclerView.setHasFixedSize(true);
-        newsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        matchRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
-        newsItems = new ArrayList<>();
+        matchItems = new ArrayList<>();
 
 
         for (int i = 0; i < 10; i++) {
-            NewsItem item = new NewsItem("http://i.imgur.com/DvpvklR.png",
-                    "China" + i,
-                    "Goal!!!", "101");
-            newsItems.add(item);
+            MatchItem item = new MatchItem("United",
+                    "Spurs",
+                    "7576", "101", "10");
+            matchItems.add(item);
         }
 
-        newsAdapter = new NewsAdapter(MainActivity.this, newsItems);
-        newsRecyclerView.setAdapter(newsAdapter);
+        matchesAdapter = new MatchesAdapter(this, matchItems);
+        matchRecyclerView.setAdapter(matchesAdapter);
 
     }
-
 }

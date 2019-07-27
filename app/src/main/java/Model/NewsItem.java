@@ -6,11 +6,13 @@ public class NewsItem {
     private String title;
     private String description;
     private String imageURl;
+    private String id;
 
-    public NewsItem(String URL, String title, String description) {
+    public NewsItem(String URL, String title, String description, String id) {
         this.imageURl = URL;
         this.title = title;
         this.description = description;
+        this.id = id;
     }
 
     public String getTitle() {
@@ -36,4 +38,6 @@ public class NewsItem {
     public void setImageURl(String imageURl) {
         this.imageURl = imageURl;
     }
+
+
 }
