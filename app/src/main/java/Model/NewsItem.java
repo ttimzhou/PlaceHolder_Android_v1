@@ -8,11 +8,11 @@ public class NewsItem {
     private String imageURl;
     private String id;
 
-    public NewsItem(String URL, String title, String description, String id) {
+    public NewsItem(String URL, String title, String id) {
         this.imageURl = URL;
         this.title = title;
-        this.description = description;
         this.id = id;
+        this.description = "Description";
     }
 
     public String getTitle() {

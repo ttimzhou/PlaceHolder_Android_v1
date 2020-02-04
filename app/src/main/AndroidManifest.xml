@@ -11,9 +11,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".MatchDetailActivity"></activity>
-        <activity android:name=".MatchPreviewActivity" />
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".MatchDetailActivity" />
         <activity
             android:name=".NewsDetailActivity"
             android:label="@string/title_activity_news_detail"

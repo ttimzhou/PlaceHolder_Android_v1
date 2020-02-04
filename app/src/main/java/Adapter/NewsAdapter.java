@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.placeholder.NewsDetailActivity;
 import com.example.placeholder.R;
+import com.squareup.picasso.Picasso;
 
 
 import java.util.List;
@@ -44,13 +45,10 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder>  {
     public void onBindViewHolder(@NonNull NewsAdapter.ViewHolder holder, int position) {
 
 
-
         NewsItem item = newsItems.get(position);
         holder.title.setText(item.getTitle());
         holder.description.setText(item.getDescription());
-        holder.image.setImageResource(R.drawable.newphoto);
-//        Picasso.get().load("http://i.imgur.com/DvpvklR.png").into(holder.image);
-
+//        Picasso.get().load(item.getImageURl()).resize(50, 50).into(holder.image);
     }
 
     @Override
@@ -70,7 +68,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder>  {
 
             itemView.setOnClickListener(this);
 
-            image = (ImageView) itemView.findViewById(R.id.newsImage);
+            image = (ImageView) itemView.findViewById(R.id.test);
             title = (TextView) itemView.findViewById(R.id.newsTitle);
             description = (TextView) itemView.findViewById(R.id.newsDescription);
         }
@@ -81,9 +79,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder>  {
             onSelectedNews(newsItems.get(position));
         }
     }
-
-
-
 
     public void onSelectedNews(NewsItem selectedNews) {
 //        process data and find the right activity

@@ -4,6 +4,331 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MatchDetailActivity">
 
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/currPrice"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:gravity="top"
+            android:text="Alpha vs Beta" />
+
+        <FrameLayout
+            android:id="@+id/test"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/currPrice"
+            android:layout_marginTop="40dp"
+            app:layout_anchor="@id/currPrice"
+            app:layout_anchorGravity="bottom">
+
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignStart="@+id/test"
+                android:layout_alignTop="@+id/test"
+                android:scrollbars="none">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+
+                    <com.scichart.charting.visuals.SciChartSurface
+                        android:id="@+id/TempTradingChartHolder"
+                        android:layout_width="325dp"
+                        android:layout_height="350dp"></com.scichart.charting.visuals.SciChartSurface>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tradeDetailS5"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_toRightOf="@id/TempTradingChartHolder">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/S5detail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tradeDetailS4"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/tradeDetailS5"
+                        android:layout_toRightOf="@id/TempTradingChartHolder">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/S4detail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tradeDetailS3"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/tradeDetailS4"
+                        android:layout_toRightOf="@id/TempTradingChartHolder">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <TextView
+                                android:id="@+id/S3detail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="B [98, 1700]"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tradeDetailS2"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/tradeDetailS3"
+                        android:layout_toRightOf="@id/TempTradingChartHolder">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <TextView
+                                android:id="@+id/S2detail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tradeDetailS1"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/tradeDetailS2"
+                        android:layout_toRightOf="@id/TempTradingChartHolder">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <TextView
+                                android:id="@+id/S1detail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tradeDetailB1"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/tradeDetailS1"
+                        android:layout_toRightOf="@id/TempTradingChartHolder">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/B1detail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="B [65, 1900]"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tradeDetailB2"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/tradeDetailB1"
+                        android:layout_toRightOf="@id/TempTradingChartHolder">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/B2detail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tradeDetailB3"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/tradeDetailB2"
+                        android:layout_toRightOf="@id/TempTradingChartHolder">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/B3detail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tradeDetailB4"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/tradeDetailB3"
+                        android:layout_toRightOf="@id/TempTradingChartHolder">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/B4detail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tradeDetailB5"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/tradeDetailB4"
+                        android:layout_toRightOf="@id/TempTradingChartHolder">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/B5detail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/transactionRecycler"
+                        android:layout_width="111dp"
+                        android:layout_height="143dp"
+                        android:layout_below="@+id/tradeDetailB5"
+                        android:layout_toRightOf="@id/TempTradingChartHolder" />
+
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+
+                    </androidx.core.widget.NestedScrollView>
+
+
+                </RelativeLayout>
+
+
+            </ScrollView>
+
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNav"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:menu="@menu/button_nav_match_detail"
+                android:layout_gravity="bottom">
+            </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+        </FrameLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+

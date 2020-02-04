@@ -17,14 +17,14 @@
 
 
             <ImageView
-                android:id="@+id/newsImage"
+                android:id="@+id/test"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:contentDescription="News Image"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp" />
-                <!--android:src="@drawable/news_view_holder" />-->
+
 
             <TextView
                 android:id="@+id/newsTitle"
