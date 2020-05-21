@@ -65,7 +65,7 @@ public class fragment_new_home_activity extends Fragment {
                     System.out.println(e);
                 }
 
-                JsonObjectRequest request1 = new JsonObjectRequest(Request.Method.POST, "https://sportexchange.herokuapp.com/game/update/5d573242b24c7c00173777b9", input, new Response.Listener<JSONObject>() {
+                JsonObjectRequest request1 = new JsonObjectRequest(Request.Method.POST, "https://sportexchange.herokuapp.com/game/update/5ec4589ae75782001713a448", input, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         System.out.println(response + "sucess update");
@@ -82,11 +82,8 @@ public class fragment_new_home_activity extends Fragment {
 
             }
         });
-
-
         newsItems = new ArrayList<>();
         URL = "https://sportexchange.herokuapp.com/news/allnews";
-
         queue = Volley.newRequestQueue(getActivity());
         request = new JsonArrayRequest(Request.Method.GET, URL, null, new Response.Listener<JSONArray>() {
             @Override
@@ -107,7 +104,6 @@ public class fragment_new_home_activity extends Fragment {
 
 //        Error with news activity
 //        queue.add(request);
-
         newsAdapter = new NewsAdapter(getContext(), newsItems);
         newsRecyclerView.setAdapter(newsAdapter);
     }

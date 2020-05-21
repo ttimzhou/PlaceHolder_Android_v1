@@ -13,6 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".tradeActivity"
+            android:label="@string/title_activity_trade"
+            android:theme="@style/NoActionBar"></activity>
         <activity android:name=".MatchDetailActivity" />
         <activity
             android:name=".NewsDetailActivity"

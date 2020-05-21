@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1006988163989",
+    "firebase_url": "https://sportsexchange-a6c5d.firebaseio.com",
+    "project_id": "sportsexchange-a6c5d",
+    "storage_bucket": "sportsexchange-a6c5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1006988163989:android:8de8697223839483f1149c",
+        "android_client_info": {
+          "package_name": "com.example.placeholder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1006988163989-tljvat2bmsc3fgitnlkqdftv0rh9o28e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBR0vSILvVzsbRvdF9NSHp5uR-R2vPNjLs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1006988163989-tljvat2bmsc3fgitnlkqdftv0rh9o28e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

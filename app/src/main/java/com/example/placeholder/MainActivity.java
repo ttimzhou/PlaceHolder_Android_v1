@@ -1,9 +1,7 @@
 package com.example.placeholder;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -12,9 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.android.volley.NetworkResponse;
-import com.android.volley.ParseError;
-import com.android.volley.Request;
+
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -94,8 +90,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             System.out.println(e);
         }
-
-
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new fragment_new_home_activity());
 

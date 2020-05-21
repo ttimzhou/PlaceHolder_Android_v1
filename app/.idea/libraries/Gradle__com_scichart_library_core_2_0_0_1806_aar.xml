@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.scichart.library:core:2.0.0.1806@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/70f90e33a272a2a45081d33453eb6815/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/70f90e33a272a2a45081d33453eb6815/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/70f90e33a272a2a45081d33453eb6815/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

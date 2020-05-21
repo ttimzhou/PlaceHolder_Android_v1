@@ -33,17 +33,14 @@ public class fragment_match_home_activity extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         matchRecyclerView = getView().findViewById(R.id.recyclerViewMatch);
-
         matchRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-
-
         matchItems = new ArrayList<>();
 
 
         for (int i = 0; i < 10; i++) {
             MatchItem item = new MatchItem("United",
                     "Spurs",
-                    "7576", "101", "10");
+                    "5ec4775ee75782001713a493", "101", "10");
             matchItems.add(item);
         }
 

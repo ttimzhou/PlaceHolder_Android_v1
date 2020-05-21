@@ -37,7 +37,7 @@
 
 
             <TextView
-                android:id="@+id/currPrice"
+                android:id="@+id/matchTitle"
                 android:layout_width="80dp"
                 android:gravity="right"
                 android:layout_height="wrap_content"

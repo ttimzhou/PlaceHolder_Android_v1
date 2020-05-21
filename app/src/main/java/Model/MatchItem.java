@@ -6,6 +6,7 @@ public class MatchItem {
     private String id;
     private String currPrice;
     private String percentChangeInPrice;
+    private String matchID;
 
 
     public MatchItem(String homeTeam, String guestTeam, String id, String currPrice, String change) {

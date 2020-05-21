@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.highsoft.highcharts:highcharts:6.1r@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fd24042799ab0547b711ee5956855299/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fd24042799ab0547b711ee5956855299/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -2,6 +2,7 @@ package Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,7 +64,7 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesAdapter.ViewHold
             itemView.setOnClickListener(this);
             homeName =  (TextView) itemView.findViewById(R.id.homeTeamName_preview);
             guestName = (TextView) itemView.findViewById(R.id.guestTeamName_preview);
-            currPrice = (TextView) itemView.findViewById(R.id.currPrice);
+            currPrice = (TextView) itemView.findViewById(R.id.matchTitle);
             percentChangeInPrice = itemView.findViewById(R.id.percentChangeSinceStart);
 
         }
@@ -73,6 +74,7 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesAdapter.ViewHold
             Intent intent = new Intent(context, MatchDetailActivity.class);
 //          add necessary information
 
+            intent.putExtra("id", matchItems.get(getAdapterPosition()).getId());
             context.startActivity(intent);
         }
     }
